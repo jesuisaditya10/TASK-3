@@ -1,7 +1,7 @@
 const fs = require("fs");
 
 exports.log = async (url , userId , userRole , accessStatus)=>{
-    console.log("HEREeeee");
+    
     const logString = `user with id ${userId} and role ${userRole} tried to access ${url} . Access Result : ${accessStatus}`;
     const fileDataObj = await fs.readFile("log.txt" , 'utf8' , async(err,data)=>{
         let fileData = "";
